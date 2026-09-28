@@ -22,7 +22,7 @@ api = f"https://api.github.com/users/{USER}"
 headers = {"User-Agent": "profile-art-bot", "Accept": "application/vnd.github+json"}
 tok = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
 if tok:
-    headers["Authorization"] = f"token {tok}"
+    headers["Authorization"] = f"Bearer {tok}"
 
 req = urllib.request.Request(api, headers=headers)
 with urllib.request.urlopen(req, timeout=20) as r:
