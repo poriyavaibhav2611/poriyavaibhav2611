@@ -26,7 +26,7 @@ USERNAME  = "poriyavaibhav2611"
 LOCATION  = "india"
 COMPANY   = "abox agency"
 LANGUAGES = "JavaScript, HTML"
-WEBSITE   = "https://prratham-dev.vercel.app/"
+WEBSITE   = "https://vaibhav-dev.vercel.app/"
 # ───────────────────────────────────────────────────────────────
 
 COL = 62          # character‑width of the card content area
