@@ -39,8 +39,14 @@ jobs:
           WORDMARK_TEXT: VAIBHAV
         run: python scripts/make_wordmark_svg.py --mode rock --out wordmark.svg
 
+      - name: Generate avatar ASCII art
+        run: |
+          python scripts/fetch_avatar.py poriyavaibhav2611
+          python scripts/prep_photo.py
+          python scripts/make_ascii_svg.py
+
       - name: Commit updated art
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: refresh profile art [skip ci]"
-          file_pattern: "data/contributions.json contrib-heatmap.svg wordmark.svg"
+          file_pattern: "data/contributions.json contrib-heatmap.svg wordmark.svg source-photo.jpg source-prepped.png vaibhav-ascii.svg"
