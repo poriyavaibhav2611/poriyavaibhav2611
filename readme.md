@@ -9,21 +9,10 @@
 
 <table>
 <tr>
-<td valign="top"><img src="./vaibhav-ascii.svg?v=1" width="370" alt="Vaibhav Poriya — ASCII portrait" /></td>
-<td valign="top"><img src="./wordmark.svg?v=1" width="490" alt="VAIBHAV — 3D ASCII wordmark" /></td>
+<td valign="top"><img src="./vaibhav-ascii.svg" width="370" alt="Vaibhav Poriya — ASCII portrait" /></td>
+<td valign="top"><img src="./wordmark.svg" width="490" alt="VAIBHAV — 3D ASCII wordmark" /></td>
 </tr>
 </table>
-
-<br>
-<br>
-
-<h3><code>vaibhav@github ~ $ ./stats.sh</code></h3>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./dark_mode.svg?v=1">
-  <source media="(prefers-color-scheme: light)" srcset="./light_mode.svg?v=1">
-  <img alt="Vaibhav's GitHub Stats" src="./dark_mode.svg?v=1">
-</picture>
 
 <br>
 <br>
@@ -33,7 +22,7 @@
 
 <h3><code>vaibhav@github ~ $ ./contributions.sh</code></h3>
 
-<img src="./contrib-heatmap.svg?v=1" width="860" alt="Vaibhav's GitHub contribution graph — auto-refreshed daily" />
+<img src="./contrib-heatmap.svg" width="860" alt="Vaibhav's GitHub contribution graph — auto-refreshed daily" />
 
 <br>
 <br>

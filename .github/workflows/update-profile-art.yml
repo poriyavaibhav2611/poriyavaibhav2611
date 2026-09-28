@@ -45,11 +45,6 @@ jobs:
           python scripts/prep_photo.py
           python scripts/make_ascii_svg.py
 
-      - name: Generate profile card
-        run: python scripts/generate_card.py
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Commit updated art
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
@@ -57,4 +52,4 @@ jobs:
           commit_user_name: "Vaibhav Poriya"
           commit_user_email: "poriyavaibhav2611@gmail.com"
           commit_author: "Vaibhav Poriya <poriyavaibhav2611@gmail.com>"
-          file_pattern: "data/contributions.json contrib-heatmap.svg wordmark.svg source-photo.jpg source-prepped.png vaibhav-ascii.svg dark_mode.svg light_mode.svg"
+          file_pattern: "data/contributions.json contrib-heatmap.svg wordmark.svg source-photo.jpg source-prepped.png vaibhav-ascii.svg"
