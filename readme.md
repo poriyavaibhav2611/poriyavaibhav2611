@@ -17,6 +17,17 @@
 <br>
 <br>
 
+<h3><code>vaibhav@github ~ $ ./stats.sh</code></h3>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./dark_mode.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./light_mode.svg">
+  <img alt="Vaibhav's GitHub Stats" src="./dark_mode.svg">
+</picture>
+
+<br>
+<br>
+
 <!-- animated contribution graph: real data, boxes reveal cell by cell
      (regenerated daily by .github/workflows/update-profile-art.yml) -->
 
