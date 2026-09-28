@@ -44,6 +44,8 @@ jobs:
           python scripts/fetch_avatar.py poriyavaibhav2611
           python scripts/prep_photo.py
           python scripts/make_ascii_svg.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit updated art
         uses: stefanzweifel/git-auto-commit-action@v5
