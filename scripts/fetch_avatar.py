@@ -19,7 +19,12 @@ OUT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(HERE, "..", "source-pho
 
 # hit the API for the current avatar_url (follows redirects to CDN)
 api = f"https://api.github.com/users/{USER}"
-req = urllib.request.Request(api, headers={"User-Agent": "profile-art-bot", "Accept": "application/vnd.github+json"})
+headers = {"User-Agent": "profile-art-bot", "Accept": "application/vnd.github+json"}
+tok = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+if tok:
+    headers["Authorization"] = f"token {tok}"
+
+req = urllib.request.Request(api, headers=headers)
 with urllib.request.urlopen(req, timeout=20) as r:
     import json
     avatar = json.loads(r.read())["avatar_url"] + "&s=1024"

@@ -44,6 +44,8 @@ jobs:
           python scripts/fetch_avatar.py poriyavaibhav2611
           python scripts/prep_photo.py
           python scripts/make_ascii_svg.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate profile card
         run: python scripts/generate_card.py
