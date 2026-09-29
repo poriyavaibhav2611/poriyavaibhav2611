@@ -9,7 +9,7 @@
 
 <table>
 <tr>
-<td valign="top"><img src="./vaibhav-ascii.svg" width="370" alt="Vaibhav Poriya — ASCII portrait" /></td>
+<!-- <td valign="top"><img src="./vaibhav-ascii.svg" width="370" alt="Vaibhav Poriya — ASCII portrait" /></td> -->
 <td valign="top"><img src="./wordmark.svg" width="490" alt="VAIBHAV — 3D ASCII wordmark" /></td>
 </tr>
 </table>
