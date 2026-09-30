@@ -48,10 +48,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit updated art
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: refresh profile art [skip ci]"
-          commit_user_name: "Vaibhav Poriya"
-          commit_user_email: "poriyavaibhav2611@gmail.com"
-          commit_author: "Vaibhav Poriya <poriyavaibhav2611@gmail.com>"
-          file_pattern: "data/contributions.json contrib-heatmap.svg wordmark.svg source-photo.jpg source-prepped.png vaibhav-ascii.svg"
+        run: |
+          git config --global user.name "Vaibhav Poriya"
+          git config --global user.email "poriyavaibhav2611@gmail.com"
+          git add data/contributions.json contrib-heatmap.svg wordmark.svg source-photo.jpg source-prepped.png vaibhav-ascii.svg
+          git commit -m "chore: refresh profile art [skip ci]" || echo "No changes to commit"
+          git push
