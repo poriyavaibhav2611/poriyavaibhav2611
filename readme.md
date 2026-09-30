@@ -44,5 +44,5 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Vaibhav%20Poriya-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vaibhav-poriya-0540b2349)
 
 <br>
- 
+  
 </div>
