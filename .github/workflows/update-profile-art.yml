@@ -34,23 +34,8 @@ jobs:
       - name: Render animated contribution graph SVG
         run: python scripts/generate_streak_svg.py poriyavaibhav2611 contrib-heatmap.svg
 
-      - name: Generate wordmark
-        env:
-          WORDMARK_TEXT: VAIBHAV
-        run: python scripts/make_wordmark_svg.py --mode rock --out wordmark.svg
-
-      - name: Generate avatar ASCII art
-        run: |
-          python scripts/fetch_avatar.py poriyavaibhav2611
-          python scripts/prep_photo.py
-          python scripts/make_ascii_svg.py
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Commit updated art
-        run: |
-          git config --global user.name "Vaibhav Poriya"
-          git config --global user.email "poriyavaibhav2611@gmail.com"
-          git add data/contributions.json contrib-heatmap.svg wordmark.svg source-photo.jpg source-prepped.png vaibhav-ascii.svg
-          git commit -m "chore: refresh profile art [skip ci]" || echo "No changes to commit"
-          git push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: refresh contribution graph [skip ci]"
+          file_pattern: "data/contributions.json contrib-heatmap.svg"
